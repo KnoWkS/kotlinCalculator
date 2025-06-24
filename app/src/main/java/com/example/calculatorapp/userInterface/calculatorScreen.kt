@@ -42,7 +42,16 @@ fun CalculatorScreen(viewModel: CalculatorViewModel) {
             textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onBackground)
         )
 
-        OperatorDropdown(viewModel)
+
+        Button(
+            onClick = {
+                val temp = input1
+                input1 = input2
+                input2 = temp
+            }
+        ) {
+            Text("Inverser les nombres")
+        }
 
         Button(onClick = {
             viewModel.calculate(input1, input2, selectedOperator)
