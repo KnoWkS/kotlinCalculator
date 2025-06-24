@@ -36,6 +36,7 @@ fun CalculatorScreen(viewModel: CalculatorViewModel) {
             label = { Text("Nombre 1") },
             textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onBackground)
         )
+        OperatorDropdown(viewModel)
 
         OutlinedTextField(
             value = input2,
