@@ -103,7 +103,8 @@ fun CalculatorScreen(viewModel: CalculatorViewModel) {
         LazyColumn(
             modifier = Modifier
                 .fillMaxWidth()
-                .heightIn(max = 200.dp)
+                .weight(1f)
+                .padding(bottom = 16.dp)
         ) {
             items(history.reversed()) { entry ->
                 Text(
