@@ -77,7 +77,7 @@ fun CalculatorScreen(viewModel: CalculatorViewModel) {
         }
 
         Spacer(modifier = Modifier.height(16.dp))
-        
+
         Card(
             modifier = Modifier
                 .fillMaxWidth()
@@ -131,21 +131,6 @@ fun CalculatorScreen(viewModel: CalculatorViewModel) {
                     }
                 }
             )
-        }
-
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(1f)
-                .padding(bottom = 16.dp)
-        ) {
-            items(history.reversed()) { entry ->
-                Text(
-                    text = entry,
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.padding(vertical = 2.dp)
-                )
-            }
         }
     }
 }
