@@ -19,6 +19,8 @@ fun CalculatorScreen(viewModel: CalculatorViewModel) {
     val history by viewModel.history.collectAsState()
     val selectedOperator by viewModel.selectedOperator.collectAsState()
 
+    var showDialog by remember { mutableStateOf(false) }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
