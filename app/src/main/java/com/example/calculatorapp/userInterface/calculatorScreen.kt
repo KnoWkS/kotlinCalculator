@@ -71,6 +71,34 @@ fun CalculatorScreen(viewModel: CalculatorViewModel) {
             style = MaterialTheme.typography.titleMedium,
             modifier = Modifier.padding(bottom = 8.dp)
         )
+        Button(onClick = { showDialog = true }) {
+            Text("Vider l'historique")
+        }
+
+        if (showDialog) {
+            AlertDialog(
+                onDismissRequest = { showDialog = false },
+                title = { Text("Confirmation") },
+                text = { Text("Es-tu sûr de vouloir supprimer l'historique ?") },
+                confirmButton = {
+                    TextButton(
+                        onClick = {
+                            viewModel.clearHistory()
+                            showDialog = false
+                        }
+                    ) {
+                        Text("Oui")
+                    }
+                },
+                dismissButton = {
+                    TextButton(
+                        onClick = { showDialog = false }
+                    ) {
+                        Text("Annuler")
+                    }
+                }
+            )
+        }
 
         LazyColumn(
             modifier = Modifier
