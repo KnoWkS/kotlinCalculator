@@ -1,8 +1,8 @@
-# Calculator App 📱➕➖✖️➗
+# Calculator App 
 
 A simple yet functional calculator Android app built with **Kotlin**, using **Jetpack Compose** and following the **MVVM** architecture. The app supports basic arithmetic operations and maintains a persistent calculation history using **Jetpack DataStore**.
 
-## Features ✨
+## Features 
 
 - Perform basic operations: addition, subtraction, multiplication, and division.
 - Input validation with error messages.
@@ -13,7 +13,7 @@ A simple yet functional calculator Android app built with **Kotlin**, using **Je
 - Responsive UI built with Jetpack Compose.
 - Built using MVVM pattern for better code separation and testability.
 
-## Tech Stack 🛠
+## Tech 
 
 - **Language:** Kotlin
 - **UI:** Jetpack Compose
